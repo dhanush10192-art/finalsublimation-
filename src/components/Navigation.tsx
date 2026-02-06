@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black-700/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'shadow-lg' : ''
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,17 +46,17 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-black hover:text-gray-800 font-medium transition-colors duration-300 relative group"
+                className="text-black hover:text-gray-600 font-medium transition-colors duration-300 relative group"
               >
                 {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#BD22B8] group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </div>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-all"
+            className="md:hidden p-2 text-black hover:bg-gray-100 rounded-lg transition-all"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -67,12 +67,12 @@ const Navigation = () => {
         className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
           }`}
       >
-        <div className="px-4 py-4 bg-purple-700/98 backdrop-blur-lg space-y-2">
+        <div className="px-4 py-4 bg-white border-t border-gray-100 shadow-xl space-y-2">
           {navItems.map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
-              className="block w-full text-left px-4 py-3 text-black hover:text-gray-800 hover:bg-purple-600/20 rounded-lg transition-all duration-300"
+              className="block w-full text-left px-4 py-3 text-black hover:text-[#BD22B8] hover:bg-gray-50 rounded-lg transition-all duration-300 font-medium"
             >
               {item}
             </button>

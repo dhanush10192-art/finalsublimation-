@@ -25,7 +25,7 @@ const Hero = () => {
 
 
       {/* 1. NEW VIDEO HEADER SECTION */}
-      <section className="relative w-full h-[600px] flex items-center overflow-hidden pt-20">
+      <section className="relative w-full min-h-[600px] flex items-center overflow-hidden pt-20">
 
         {/* Background Video Layer */}
         <div className="absolute inset-0 z-0 bg-gray-900">
@@ -42,13 +42,13 @@ const Hero = () => {
 
         {/* Angled Pink Gradient Overlay - Left Side */}
         <div
-          className="absolute inset-y-0 left-0 w-full md:w-[60%] lg:w-[55%] bg-gradient-to-r from-orange-500 to-pink-600 z-10 shadow-2xl"
+          className="absolute inset-y-0 left-0 w-[90%] sm:w-[85%] md:w-[60%] lg:w-[55%] bg-gradient-to-r from-orange-500 to-pink-600 z-10 shadow-2xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
         ></div>
 
         {/* Content Layer */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center h-full">
-          <div className="w-full md:w-1/2 text-white p-4 md:p-0">
+          <div className="w-[90%] sm:w-[85%] md:w-1/2 text-white p-4 md:p-0">
             <h3 className="text-xl md:text-2xl font-medium mb-2 opacity-90 drop-shadow-md">
               The #1 Industrial-Grade <br /> Sublimation Systems
             </h3>

@@ -8,11 +8,13 @@ import Gallery from '../components/Gallery';
 import Infrastructure from '../components/Infrastructure';
 import Blog from '../components/Blog';
 import About from '../components/About';
+import ClubCollections from '../components/ClubCollections';
 
 const Home = () => {
   return (
     <main className="pt-20">
       <Hero />
+      <ClubCollections />
 
       {/* 3D Designer Section added as requested */}
       <DesignIn3D />
