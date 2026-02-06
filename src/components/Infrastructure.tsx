@@ -44,8 +44,8 @@ const Infrastructure = () => {
                 key={index}
                 className="text-center group hover:transform hover:-translate-y-2 transition-all duration-300"
               >
-                <div className="inline-flex p-6 bg-purple-600/20 rounded-full mb-6 group-hover:bg-purple-600 transition-colors duration-300">
-                  <Icon className="text-purple-400 group-hover:text-white transition-colors" size={40} />
+                <div className="inline-flex p-6 bg-[#BD22B8]/20 rounded-full mb-6 group-hover:bg-[#BD22B8] transition-colors duration-300">
+                  <Icon className="text-[#BD22B8] group-hover:text-white transition-colors" size={40} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   {machine.title}

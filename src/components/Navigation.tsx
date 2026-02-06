@@ -25,19 +25,21 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white-700/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black-700/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/500X1500.png" 
-              alt="Cricket Jersey Designs Logo" 
+          <button
+            onClick={() => scrollToSection('Home')}
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+          >
+            <img
+              src="/500X1500.png"
+              alt="Cricket Jersey Designs Logo"
               className="h-12 w-auto"
             />
-          </div>
+          </button>
 
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
@@ -62,9 +64,8 @@ const Navigation = () => {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
+          }`}
       >
         <div className="px-4 py-4 bg-purple-700/98 backdrop-blur-lg space-y-2">
           {navItems.map((item) => (

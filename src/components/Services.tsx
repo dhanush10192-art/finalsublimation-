@@ -39,10 +39,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark mb-4">
-            Our Cricket Jersey Services
+            Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive cricket jersey design and manufacturing solutions
+            Comprehensive Sublimation jersey design and manufacturing solutions
           </p>
         </div>
 
@@ -54,8 +54,8 @@ const Services = () => {
                 key={index}
                 className="group bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="inline-flex p-4 rounded-lg bg-purple-100 mb-6 group-hover:bg-purple-600 transition-colors duration-300">
-                  <Icon className="text-purple-600 group-hover:text-white transition-colors" size={32} />
+                <div className="inline-flex p-4 rounded-full bg-[#BD22B8]/10 mb-6 group-hover:bg-[#BD22B8] transition-colors duration-300">
+                  <Icon className="text-[#BD22B8] group-hover:text-white transition-colors" size={32} />
                 </div>
 
                 <h3 className="text-2xl font-bold text-navy-dark mb-3">
@@ -65,7 +65,7 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <div className="mt-6 flex items-center text-purple-600 font-semibold group-hover:gap-2 transition-all">
+                <div className="mt-6 flex items-center text-[#BD22B8] font-semibold group-hover:gap-2 transition-all">
                   Learn More
                   <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
