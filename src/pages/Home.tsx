@@ -5,6 +5,7 @@ import WhatWeDo from '../components/WhatWeDo';
 import CricketJerseyBanner from '../components/CricketJerseyBanner';
 import Services from '../components/Services';
 import Gallery from '../components/Gallery';
+import ShopByCategory from '../components/ShopByCategory';
 import Infrastructure from '../components/Infrastructure';
 import Blog from '../components/Blog';
 import About from '../components/About';
@@ -29,6 +30,7 @@ const Home = () => {
       <CricketJerseyBanner />
 
       <Services />
+      <ShopByCategory />
       <Gallery />
       <Infrastructure />
       <Blog />

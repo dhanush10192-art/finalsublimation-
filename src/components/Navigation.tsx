@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +19,42 @@ const Navigation = () => {
   const navItems = ['Home', 'Services', 'Gallery', 'Infrastructure', 'Blog', 'About'];
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId.toLowerCase());
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false);
+
+    // Special handling for Gallery to navigate to the separate page
+    if (sectionId === 'Gallery') {
+      navigate('/gallery');
+      return;
+    }
+
+    // Special handling for Home to navigate to top
+    if (sectionId === 'Home') {
+      if (location.pathname !== '/') {
+        navigate('/');
+        // We can't scroll immediately because the page hasn't loaded. 
+        // In a real app we might use a hash or context to scroll after nav.
+        // For now, just going to home is enough as home starts at top.
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      return;
+    }
+
+    // For other sections
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Delay scroll to allow navigation to complete
+      setTimeout(() => {
+        const element = document.getElementById(sectionId.toLowerCase());
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId.toLowerCase());
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -46,10 +81,16 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-black hover:text-gray-600 font-medium transition-colors duration-300 relative group"
+                className={`font-medium transition-colors duration-300 relative group ${(location.pathname === '/gallery' && item === 'Gallery') || (location.pathname === '/' && item === 'Home' && !isScrolled) // Simple highlighting logic
+                    ? 'text-[#BD22B8]'
+                    : 'text-black hover:text-gray-600'
+                  }`}
               >
                 {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#BD22B8] group-hover:w-full transition-all duration-300"></span>
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-[#BD22B8] transition-all duration-300 ${(location.pathname === '/gallery' && item === 'Gallery')
+                    ? 'w-full'
+                    : 'w-0 group-hover:w-full'
+                  }`}></span>
               </button>
             ))}
           </div>

@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">ST</span>
               </div>
-              <span className="text-white font-bold text-lg">SubliColor</span>
+              <span className="text-white font-bold text-lg">FastColors</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Premium sublimation printing for custom jerseys and apparel. Quality, speed, and excellence in every print.

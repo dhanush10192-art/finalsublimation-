@@ -10,10 +10,10 @@ const ClubCollections = () => {
     const clubs = [
         { name: 'AC MILAN', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/200px-Logo_of_AC_Milan.svg.png' },
         { name: 'AJAX', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/79/Ajax_Amsterdam.svg/200px-Ajax_Amsterdam.svg.png' },
-        { name: 'ALGERIA', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Algeria_national_football_team_logo.svg/200px-Algeria_national_football_team_logo.svg.png' },
-        { name: 'AL HILAL', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Al-Hilal_Saudi_Football_Club_Logo.svg/200px-Al-Hilal_Saudi_Football_Club_Logo.svg.png' },
-        { name: 'AL NASSR', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Al_Nassr_FC_Logo.svg/200px-Al_Nassr_FC_Logo.svg.png' },
-        { name: 'ARGENTINA', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Argentine_Football_Association_logo.svg/200px-Argentine_Football_Association_logo.svg.png' },
+        { name: 'ALGERIA', logo: 'Afa_gold_logo24.svg.png' },
+        { name: 'AL HILAL', logo: 'Al_Hilal_SFC_Logo.svg.png' },
+        { name: 'AL NASSR', logo: 'al_nassr_fc.png' },
+        { name: 'ARGENTINA', logo: 'Logo_of_Algeria_national_football_team_(SVG_version).svg.png' },
         { name: 'ARSENAL', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/200px-Arsenal_FC.svg.png' },
         { name: 'BARCELONA', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/200px-FC_Barcelona_%28crest%29.svg.png' },
     ];
@@ -44,7 +44,7 @@ const ClubCollections = () => {
                 <div className="flex justify-between items-end mb-8">
                     <div>
                         <h2 className="text-2xl md:text-3xl uppercase tracking-wide">
-                            <span className="text-gray-400 font-light">CLUB</span>{' '}
+                            <span className="text-gray-400 font-bold">FOOTBALL CLUB</span>{' '}
                             <span className="text-black font-bold">COLLECTIONS</span>
                         </h2>
                     </div>

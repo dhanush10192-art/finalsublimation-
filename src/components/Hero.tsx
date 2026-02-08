@@ -40,22 +40,25 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Angled Pink Gradient Overlay - Left Side */}
+        {/* Mobile Gradient Overlay (Bottom Up) */}
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-orange-600/90 to-transparent z-10 md:hidden"></div>
+
+        {/* Desktop Angled Pink Gradient Overlay - Left Side */}
         <div
-          className="absolute inset-y-0 left-0 w-[90%] sm:w-[85%] md:w-[60%] lg:w-[55%] bg-gradient-to-r from-orange-500 to-pink-600 z-10 shadow-2xl"
+          className="hidden md:block absolute inset-y-0 left-0 w-[60%] lg:w-[55%] bg-gradient-to-r from-orange-500 to-pink-600 z-10 shadow-2xl"
           style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
         ></div>
 
         {/* Content Layer */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center h-full">
-          <div className="w-[90%] sm:w-[85%] md:w-1/2 text-white p-4 md:p-0">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-end md:items-center h-full pb-12 md:pb-0">
+          <div className="w-full md:w-1/2 text-white p-4 md:p-0 text-center md:text-left">
             <h3 className="text-xl md:text-2xl font-medium mb-2 opacity-90 drop-shadow-md">
               The #1 Industrial-Grade <br /> Sublimation Systems
             </h3>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-tight drop-shadow-lg">
               Trusted By <br /> Entrepreneurs
             </h1>
-            <button className="bg-white/20 hover:bg-white/30 border border-white/50 backdrop-blur-sm text-white text-lg font-semibold py-4 px-10 rounded transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <button className="bg-white/20 hover:bg-white/30 border border-white/50 backdrop-blur-sm text-white text-lg font-semibold py-3 md:py-4 px-8 md:px-10 rounded transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
               Shop Now
             </button>
           </div>
@@ -103,26 +106,26 @@ const Hero = () => {
 
                   {/* Content */}
                   <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 max-w-2xl text-white">
-                    <h2 className="text-3xl md:text-5xl font-bold uppercase leading-tight mb-4">
+                    <h2 className="text-xl md:text-5xl font-bold uppercase leading-tight mb-2 md:mb-4">
                       Design Your Team's <br /> Ultimate Jersey Today
                     </h2>
 
-                    <div className="mb-4">
-                      <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider">
+                    <div className="mb-2 md:mb-4">
+                      <span className="bg-red-600 text-white text-[10px] md:text-xs font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-sm uppercase tracking-wider">
                         Limited Time Offer
                       </span>
                     </div>
 
-                    <div className="flex items-baseline gap-2 mb-4">
-                      <span className="text-5xl md:text-6xl font-bold">30%</span>
-                      <span className="text-2xl md:text-3xl font-light uppercase">OFF</span>
+                    <div className="flex items-baseline gap-2 mb-2 md:mb-4">
+                      <span className="text-3xl md:text-6xl font-bold">30%</span>
+                      <span className="text-lg md:text-3xl font-light uppercase">OFF</span>
                     </div>
 
-                    <p className="text-lg text-gray-200 mb-8 max-w-lg">
+                    <p className="text-xs md:text-lg text-gray-200 mb-4 md:mb-8 max-w-lg">
                       Premium professional cricket jerseys. Perfect for your team's victory and comfort on the field.
                     </p>
 
-                    <button className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full w-fit transition-all text-sm uppercase tracking-wider shadow-lg">
+                    <button className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full w-fit transition-all text-xs md:text-sm uppercase tracking-wider shadow-lg">
                       Get Yours Today!
                     </button>
                   </div>
